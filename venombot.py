@@ -10,7 +10,7 @@ dash_markup = ReplyKeyboardMarkup(dash_keys, resize_keyboard=True)
 
 
 async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Welcome to Venom Bot", reply_markup=dash_markup)
+    await update.message.reply_text("Welcome to Venom Bot!", reply_markup=dash_markup)
 
 
 async def handle_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -20,14 +20,6 @@ async def handle_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def handle_wallet(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Enter the wallet address:', reply_markup=ReplyKeyboardRemove())
     return WALLET
-
-
-# async def enter_wallet(update: Update, context: CallbackContext) -> int:
-#     wallet_address = update.message.text
-#     # Here you can process the wallet address and generate the information
-#     info_text = f"Information for wallet address {wallet_address}:\n..."
-
-#     await update.message.reply_text(info_text, reply_markup=dash_markup)
 
 
 async def wallet_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
