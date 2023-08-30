@@ -54,10 +54,10 @@ async def post_init(application: Application) -> None:
 def main() -> None:
     """Run the bot."""
     # Create the Application and pass it your bot's token.
-    application = ApplicationBuilder().token(
-        "5671094663:AAGgo4DPNZlN-LdoFt9m_mD47BQb4QSzFTw").post_init(post_init).build()
     # application = ApplicationBuilder().token(
-    #     "6578677186:AAH1sUCAg4LPA1L29aujlIu7zrRB7cLFkkM").post_init(post_init).build()
+    #     "5671094663:AAGgo4DPNZlN-LdoFt9m_mD47BQb4QSzFTw").post_init(post_init).build()
+    application = ApplicationBuilder().token(
+        "6578677186:AAH1sUCAg4LPA1L29aujlIu7zrRB7cLFkkM").post_init(post_init).build()
 
     conv_handler = ConversationHandler(
         entry_points=[MessageHandler(
