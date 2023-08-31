@@ -8,7 +8,7 @@ WALLET = range(1)
 dash_keys = [['Wallet']]
 dash_markup = ReplyKeyboardMarkup(dash_keys, resize_keyboard=True)
 
-TOKEN = "6502495796:AAHG6qj0HNDGfmJrLmxyQ1uP0DQ5jw6k3e0"
+TOKEN = "6481835019:AAFoaIxSXkxNKpCPX9ER37z1uP2UuNsDx2s"
 
 
 async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
