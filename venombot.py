@@ -8,6 +8,8 @@ WALLET = range(1)
 dash_keys = [['Wallet']]
 dash_markup = ReplyKeyboardMarkup(dash_keys, resize_keyboard=True)
 
+TOKEN = "6502495796:AAHG6qj0HNDGfmJrLmxyQ1uP0DQ5jw6k3e0"
+
 
 async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Welcome to Venom Bot!", reply_markup=dash_markup)
@@ -54,10 +56,7 @@ async def post_init(application: Application) -> None:
 def main() -> None:
     """Run the bot."""
     # Create the Application and pass it your bot's token.
-    # application = ApplicationBuilder().token(
-    #     "5671094663:AAGgo4DPNZlN-LdoFt9m_mD47BQb4QSzFTw").post_init(post_init).build()
-    application = ApplicationBuilder().token(
-        "6578677186:AAH1sUCAg4LPA1L29aujlIu7zrRB7cLFkkM").post_init(post_init).build()
+    application = ApplicationBuilder().token(TOKEN).post_init(post_init).build()
 
     conv_handler = ConversationHandler(
         entry_points=[MessageHandler(
