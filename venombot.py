@@ -14,7 +14,7 @@ async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def handle_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_html("Paste the venom address starting with <i>\"0: and 64 hexadecimal characters\"</i> in the chat\n Or Start by pressing the Wallet button below")
+    await update.message.reply_html("Paste the venom address starting with <i>\"0: and 64 hexadecimal characters\"</i> in the chat\n Or Start by pressing the Wallet button below", reply_markup=dash_markup)
 
 
 async def handle_wallet(update: Update, context: ContextTypes.DEFAULT_TYPE):
