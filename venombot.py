@@ -33,9 +33,8 @@ async def wallet_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton("See on VenomScan",
                               web_app=WebAppInfo(url=f"https://testnet.venomscan.com/accounts/{info['address']}"))],
     ])
-    await update.message.reply_text("Fetching the address info ...")
+    await update.message.reply_text("Fetching the address info ...", reply_markup=dash_markup)
     await update.message.reply_html(html, reply_markup=address_markup)
-    await update.message.reply_markup(dash_markup)
     return ConversationHandler.END
 
 
